@@ -11,39 +11,6 @@ export const Container = styled.div`
   background: #0062be;
   transition: 0.5s;
 `;
-export const Header = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const Image = styled.image`
-  position: relative;
-  max-width: 80px;
-`;
-
-export const HeaderUL = styled.ul`
-  position: relative;
-  display: flex;
-
-  > li {
-    list-style: none;
-
-    > a {
-      display: inline-block;
-      color: #fff;
-      font-weight: 100;
-      margin-left: 40px;
-      text-decoration: none;
-    }
-  }
-`;
-
 export const Content = styled.div`
   position: relative;
   width: 100%;

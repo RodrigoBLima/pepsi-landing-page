@@ -2,9 +2,6 @@ import React from "react";
 
 import {
   Container,
-  Header,
-  Image,
-  HeaderUL,
   Content,
   TextBox,
   ImageBox,
@@ -12,7 +9,6 @@ import {
   SectionIcons,
 } from "./styles";
 
-import logoImage from "../../assets/images/logo.png";
 import pepsiImage from "../../assets/images/pepsi001.png";
 
 import iconFB from "../../assets/images/facebook.png";
@@ -21,6 +17,7 @@ import iconInst from "../../assets/images/instagram.png";
 
 import pepsiImage2 from "../../assets/images/pepsi002.png";
 import pepsiImage3 from "../../assets/images/pepsi003.png";
+import Header from "../../components/Header";
 
 const Landing: React.FC = () => {
 
@@ -36,31 +33,8 @@ const Landing: React.FC = () => {
 
   return (
     <Container className="sec">
-      <Header>
-        <a href="#" rel="noopener noreferrer">
-          <Image>
-            {" "}
-            <img src={logoImage} alt="" />
-          </Image>
-        </a>
-        <HeaderUL>
-          <li>
-            <a href="">Home</a>
-          </li>
-          <li>
-            <a href="">Products</a>
-          </li>
-          <li>
-            <a href="">What's New</a>
-          </li>
-          <li>
-            <a href="">Newsletter</a>
-          </li>
-          <li>
-            <a href="">Contact</a>
-          </li>
-        </HeaderUL>
-      </Header>
+      <Header />
+     
       <Content>
         <TextBox>
           <h2>
@@ -82,6 +56,7 @@ const Landing: React.FC = () => {
           <img src={pepsiImage} alt="" className="pepsi" id="pepsi" />
         </ImageBox>
       </Content>
+      
       <Thumb>
         <li>
           <img
