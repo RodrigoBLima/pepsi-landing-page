@@ -5,12 +5,11 @@ import {
   Header,
   Image,
   HeaderUL,
-  HeaderLI,
   Content,
   TextBox,
   ImageBox,
   Thumb,
-  SectionIcons
+  SectionIcons,
 } from "./styles";
 
 import logoImage from "../../assets/images/logo.png";
@@ -24,8 +23,19 @@ import pepsiImage2 from "../../assets/images/pepsi002.png";
 import pepsiImage3 from "../../assets/images/pepsi003.png";
 
 const Landing: React.FC = () => {
+
+  function handleImageSlider(anything: any) {
+    (document.querySelector(".pepsi") as HTMLInputElement).src = anything;
+  }
+
+  function handleColor(color: string) {
+    const sec = document.querySelector(".sec") as HTMLInputElement;
+
+    sec.style.background = color;
+  }
+
   return (
-    <Container>
+    <Container className="sec">
       <Header>
         <a href="#" rel="noopener noreferrer">
           <Image>
@@ -34,24 +44,21 @@ const Landing: React.FC = () => {
           </Image>
         </a>
         <HeaderUL>
-          {/* <li> */}
-          <HeaderLI>
+          <li>
             <a href="">Home</a>
-          </HeaderLI>
-          <HeaderLI>
+          </li>
+          <li>
             <a href="">Products</a>
-          </HeaderLI>
-          <HeaderLI>
+          </li>
+          <li>
             <a href="">What's New</a>
-          </HeaderLI>
-          <HeaderLI>
+          </li>
+          <li>
             <a href="">Newsletter</a>
-          </HeaderLI>
-          <HeaderLI>
+          </li>
+          <li>
             <a href="">Contact</a>
-          </HeaderLI>
-
-          {/* </li> */}
+          </li>
         </HeaderUL>
       </Header>
       <Content>
@@ -61,33 +68,61 @@ const Landing: React.FC = () => {
             <br />
             <span>I Like</span>
           </h2>
-          <p>Lorem ipsum</p>
+          <p>
+            é simplesmente uma simulação de texto da indústria tipográfica e de
+            impressos, e vem sendo utilizado desde o século XVI, quando um
+            impressor desconhecido pegou uma bandeja de tipos e os embaralhou
+            para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não
+            só a cinco séculos, como também ao salto para a editoração
+            eletrônica, permanecendo essencialmente inalterado.{" "}
+          </p>
           <a href="#">View All Products</a>
         </TextBox>
         <ImageBox>
-          <img src={pepsiImage} alt="" className="pepsi" />
+          <img src={pepsiImage} alt="" className="pepsi" id="pepsi" />
         </ImageBox>
       </Content>
       <Thumb>
         <li>
-          <img src={pepsiImage} alt="blue" />
+          <img
+            src={pepsiImage}
+            alt="blue"
+            onClick={() => {
+              handleImageSlider(pepsiImage);
+              handleColor("#0062be");
+            }}
+          />
         </li>
         <li>
-          <img src={pepsiImage2} alt="gray" />
+          <img
+            src={pepsiImage2}
+            alt="gray"
+            onClick={() => {
+              handleImageSlider(pepsiImage2);
+              handleColor("#e60c2e");
+            }}
+          />
         </li>
         <li>
-          <img src={pepsiImage3} alt="black" />
+          <img
+            src={pepsiImage3}
+            alt="black"
+            onClick={() => {
+              handleImageSlider(pepsiImage3);
+              handleColor("#1e1e1e");
+            }}
+          />
         </li>
       </Thumb>
       <SectionIcons>
         <li>
-          <img src={iconInst} alt="" />
+          <img src={iconInst} alt="iconInst" />
         </li>
         <li>
-          <img src={iconTw} alt="" />
+          <img src={iconTw} alt="iconTw" />
         </li>
         <li>
-          <img src={iconFB} alt="" />
+          <img src={iconFB} alt="iconFB" />
         </li>
       </SectionIcons>
     </Container>

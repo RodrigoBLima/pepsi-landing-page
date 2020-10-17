@@ -30,17 +30,17 @@ export const Image = styled.image`
 export const HeaderUL = styled.ul`
   position: relative;
   display: flex;
-`;
 
-export const HeaderLI = styled.li`
-  list-style: none;
+  > li {
+    list-style: none;
 
-  > a {
-    display: inline-block;
-    color: #fff;
-    font-weight: 100;
-    margin-left: 40px;
-    text-decoration: none;
+    > a {
+      display: inline-block;
+      color: #fff;
+      font-weight: 100;
+      margin-left: 40px;
+      text-decoration: none;
+    }
   }
 `;
 
