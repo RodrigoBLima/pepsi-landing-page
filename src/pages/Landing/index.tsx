@@ -20,7 +20,6 @@ import pepsiImage3 from "../../assets/images/pepsi003.png";
 import Header from "../../components/Header";
 
 const Landing: React.FC = () => {
-
   function handleImageSlider(anything: any) {
     (document.querySelector(".pepsi") as HTMLInputElement).src = anything;
   }
@@ -34,7 +33,7 @@ const Landing: React.FC = () => {
   return (
     <Container className="sec">
       <Header />
-     
+
       <Content>
         <TextBox>
           <h2>
@@ -56,7 +55,7 @@ const Landing: React.FC = () => {
           <img src={pepsiImage} alt="" className="pepsi" id="pepsi" />
         </ImageBox>
       </Content>
-      
+
       <Thumb>
         <li>
           <img
@@ -91,13 +90,19 @@ const Landing: React.FC = () => {
       </Thumb>
       <SectionIcons>
         <li>
-          <img src={iconInst} alt="iconInst" />
+          <a href="#">
+            <img src={iconInst} alt="iconInst" />
+          </a>
         </li>
         <li>
-          <img src={iconTw} alt="iconTw" />
+          <a href="#">
+            <img src={iconTw} alt="iconTw" />
+          </a>
         </li>
         <li>
-          <img src={iconFB} alt="iconFB" />
+          <a href="#">
+            <img src={iconFB} alt="iconFB" />
+          </a>
         </li>
       </SectionIcons>
     </Container>
